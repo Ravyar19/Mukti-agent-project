@@ -17,7 +17,7 @@ const CoachingForm = () => {
   // Mutation for Agent 1
   const agent1Mutation = useMutation(
     (description) =>
-      axios.post("http://localhost:3000/coaching/agent1", {
+      axios.post("https://multi-agent-project.onrender.com/coaching/agent1", {
         managerDescription: description,
       }),
     {
@@ -35,7 +35,7 @@ const CoachingForm = () => {
   // Mutation for Agent 2
   const agent2Mutation = useMutation(
     (emotionalFeedback) =>
-      axios.post("http://localhost:3000/coaching/agent2", {
+      axios.post("https://multi-agent-project.onrender.com/coaching/agent2", {
         emotionalFeedback,
       }),
     {
@@ -53,7 +53,7 @@ const CoachingForm = () => {
   // Mutation for Agent 3
   const agent3Mutation = useMutation(
     (strategicPlan) =>
-      axios.post("http://localhost:3000/coaching/agent3", { strategicPlan }),
+      axios.post("https://multi-agent-project.onrender.com/coaching/agent3", { strategicPlan }),
     {
       onSuccess: (data) => {
         setAgent3Data(data.data);
